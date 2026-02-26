@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web AI PDF Agent</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #f6f9ff, #e9efff);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 420px;
+            padding: 30px 35px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px dashed #4f6ef7;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4f6ef7;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #3d5ae0;
+        }
+
+        pre {
+            margin-top: 20px;
+            text-align: left;
+            background: #f4f6ff;
+            padding: 15px;
+            border-radius: 8px;
+            max-height: 220px;
+            overflow-y: auto;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Web AI PDF Agent</h2>
+    <p>Upload one or more PDF documents to extract essential data using AI.</p>
+
+    <input type="file" id="pdfFiles" multiple>
+    <button onclick="upload()">Extract Data</button>
+
+    <pre id="output">JSON output will appear here...</pre>
+
+    <div class="footer">
+        Powered by AI Document Processing
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
