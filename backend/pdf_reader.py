@@ -3,10 +3,10 @@ import pytesseract
 from pdf2image import convert_from_path
 import os
 
-# 🔧 Set Tesseract path (Windows only)
+#  Set Tesseract path (Windows only)
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-# 🔧 Set Poppler path (Windows only)
+#  Set Poppler path (Windows only)
 POPPLER_PATH = r"C:\poppler\Library\bin"
 
 
@@ -18,7 +18,7 @@ def extract_text(pdf_path):
 
     text = ""
 
-    # 🟢 STEP 1: Try normal text extraction
+    #  STEP 1: Try normal text extraction
     try:
         with pdfplumber.open(pdf_path) as pdf:
             for page in pdf.pages:
@@ -28,9 +28,9 @@ def extract_text(pdf_path):
     except:
         pass
 
-    # 🟡 STEP 2: If no text found → OCR
+    #  STEP 2: If no text found → OCR
     if len(text.strip()) < 50:
-        print("⚠️ No readable text found. Using OCR...")
+        print("No readable text found. Using OCR...")
 
         images = convert_from_path(
             pdf_path,
