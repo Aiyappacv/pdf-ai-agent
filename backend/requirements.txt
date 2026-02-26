@@ -1,4 +1,7 @@
 flask
 flask-cors
 pdfplumber
-openai
+pytesseract
+pdf2image
+pillow
+google-generativeai
